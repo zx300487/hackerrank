@@ -1,0 +1,93 @@
+#Challenge 1:
+
+$ echo HELLO
+
+HELLO
+
+#Challenge 2:
+
+#!/bin/bash
+for i in {1..99..2}
+do
+   echo $i
+done
+
+1
+3
+5
+7
+.
+.
+
+#Challenge 3:
+
+m0j0@r1s1n:~/git$ read varname
+gavin
+m0j0@r1s1n:~/git$ echo Welcome $varname
+Welcome gavin
+
+#Challenge 4:
+
+#!/bin/bash/
+
+m0j0@r1s1n:~$ for i in {1..50}; do    echo "$i"; done
+1
+2
+3
+4
+5
+
+
+#Challenge 5:
+
+read x
+read y
+echo "$(($x + $y))"
+echo "$(($x - $y))"
+echo "$(($x * $y))"
+echo "$(($x / $y))"
+
+#Challenge 6:
+
+read X
+read Y
+
+if [ $X -gt $Y ]
+    then
+        echo "X is greater than Y"
+fi
+if [ $X -eq $Y ]
+    then
+        echo "X is equal to Y"
+fi
+if [ $X -lt $Y ]
+    then
+        echo "X is less than Y"
+fi
+
+#Another Solution using elif/else conditions:
+
+read X
+read Y
+
+if (( $X < $Y )); then
+    echo 'X is less than Y'
+elif (( $X > $Y )); then
+    echo 'X is greater than Y'
+else
+    echo 'X is equal to Y'
+fi
+
+#Challenge 7:
+
+read X
+read Y
+read Z
+
+if [[ "$X" == "$Y" && "$X" == "$Z" ]]; then
+    echo 'EQUILATERAL'
+elif [[ "$X" == "$Y" || "$X" == "$Z" || "$Y" == "$Z" ]] ; then
+    echo 'ISOSCELES'
+else
+    echo 'SCALENE'
+fi
